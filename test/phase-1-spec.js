@@ -99,29 +99,29 @@ describe("myRange(min, max, step)", () => {
 describe('fizzBuzz(max)', ()=> {
   it('should throw a RangeError if max < 0', ()=> {
     //Arrange
-
+    let max = -1;
     //Act
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(() => fizzBuzz(max)).to.throw(RangeError);
 
   })
   it('should throw a TypeError if max is not a number', ()=> {
     //Arrange
-
+    let max = "string"
     //Act
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(() => fizzBuzz(max)).to.throw(TypeError);
 
   })
   it('should return an array from 0 to max (not inclusive) of numbers that are divisible by either 3 or 5 but not both', ()=> {
     //Arrange
-
+    let max = 6
     //Act
-
+    let result = fizzBuzz(max)
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(result).to.eql([3, 5]);
 
   })
 })

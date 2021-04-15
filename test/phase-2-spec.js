@@ -10,7 +10,7 @@ describe('mirrorArray()', function () {
   it('should return a single array where the first half is the orginal array and the second half is a mirror of the first half', function () {
     //Arrange
     let array = [1, 2, 3];
-  
+
     //Act
     let result = mirrorArray(array);
     //Assert
@@ -20,7 +20,7 @@ describe('mirrorArray()', function () {
 
 //2. hiddenCounter
 describe('hiddenCounter()', function () {
-  
+
   it('should return a function that will increment the counter when invoked', function () {
     //Arrange
     let returnFunc = hiddenCounter();
@@ -37,20 +37,24 @@ describe('hiddenCounter()', function () {
 describe('myMap', function () {
  it("should function like the built in Array#map", function () {
     //Arrange
-   
+   let array = [1, 2, 3, 4]
+   let cb = function(num) {return num * 3}
     //Act
-   
+  let result = myMap(array, cb);
     //Assert
-   expect.fail('Remove this expect.fail and replace it with your test');
+   expect(result).to.eql([3, 6, 9, 12]);
   });
 
   it("should not call the built in Array#map", function () {
      //Arrange
-    
+    let noMap = chai.spy.on(Array.prototype, "map")
+    let array = [1, 2, 3, 4]
+    let cb = function(num) {return "hello"}
+    myMap(array, cb)
     //Act
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(noMap).to.not.have.called()
   });
 })
 
@@ -58,11 +62,11 @@ describe('myMap', function () {
 describe('avgValue', function () {
   it('should return the average of an array of numbers', function () {
      //Arrange
-    
+    let array = [2, 3, 4]
     //Act
-
+    let result = avgValue(array)
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(result).to.eql(3);
 
   })
 })

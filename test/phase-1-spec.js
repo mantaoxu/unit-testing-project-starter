@@ -4,27 +4,36 @@ const { isFive, isOdd, myRange, fizzBuzz} = require("../problems/phase-1");
 describe("isFive(num)", () => { 
   it("should return true if the num is 5 otherwise false", () => {
     //Arrange
+    let num = 5;
     //Act
-    //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    let result = isFive(num);
 
-    //Arrange
-    
-    //Act
-    
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(result).to.equal(5);
+    
+    // //Arrange
+    // let num2 = 10;
+    
+    // //Act
+    // let result2 =isFive(num2);
+    
+    // //Assert
+    // expect(result2).to.equal();
+    
 
   });
 });
 describe("isOdd(number)", () => {
   it("should return true if number is odd", () => {
     //Arrange
+    let number = 3;
    
     //Act
+    let result = isOdd(number);
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(result).to.equal(true);
+    
 
   });
   it("should return false if the num is even", () => {

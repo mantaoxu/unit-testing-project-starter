@@ -3,7 +3,9 @@
 */
 function isFive(num) {
  if (num === 5) {
-   return 5;
+   return true;
+ }else {
+   return false;
  }
 }
 
@@ -13,8 +15,11 @@ function isFive(num) {
 function isOdd(number) {
   if (typeof number !== 'number'){
     throw Error('some error')
+  }else if(number % 2 === 0) {
+    return false
+  }else {
+    return true
   }
-  return (number % 2 === 0);
 }
 
 /*3. Array  of the Range Write a function myRange(min, max, step) that takes in
@@ -25,13 +30,13 @@ function isOdd(number) {
 function myRange(min, max, step=1) {
   const array = []
   for (let i = min; i <= max; i++) {
-    array.push(i);  
+    array.push(i);
   }
   return array
 }
 /*4. Fizz Buzz Define a function fizzBuzz(max) that takes a number and prints
    every number from 0 to max (not inclusive) that is divisible by either 3 or
-   5, but not both. 
+   5, but not both.
 */
 
 function fizzBuzz(max) {

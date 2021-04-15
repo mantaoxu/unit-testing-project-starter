@@ -59,32 +59,40 @@ describe("myRange(min, max, step)", () => {
   context("if step is not provided", () => {
     it("should return the correct array with default value step=1", () => {
       //Arrange
-
+      let min = 2;
+      let max = 6;
       //Act
+      let result = myRange(min, max);
 
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      expect(result).to.eql([2, 3, 4, 5, 6]);
 
     });
   });
   context("if step is provided", () => {
     it("should return the correct array", () => {
       //Arrange
+      let min = 2;
+      let max = 6;
+      let step = 2;
 
       //Act
+      let result = myRange(min, max, step);
 
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      expect(result).to.eql([2, 4, 6]);
 
     });
   });
   it("should throw an error if num is not type of Number", () => {
     //Arrange
+    let min = 'string';
+    let max = 'string';
+    let step = 'string';
 
     //Act
-
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(() => myRange(min, max, step)).to.throw(Error);
 
   });
 });

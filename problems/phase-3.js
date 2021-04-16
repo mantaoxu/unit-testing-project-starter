@@ -2,8 +2,8 @@ class Word {
   constructor(word) {
    this.word = word
   }
-  
-  removeVowels() { 
+
+  removeVowels() {
     let vowels = 'aeiouAEIOU'
     let newWord = ''
     for (let i = 0; i < this.word.length; i++){
@@ -26,7 +26,8 @@ class Word {
     }
     return newWord;
   }
-  pigLatin() { 
+  
+  pigLatin() {
 let vowels = "aeiouAEIOU";
 
   if (vowels.includes(this.word[0])) {
@@ -42,8 +43,8 @@ let vowels = "aeiouAEIOU";
     }
   }
   }
-  
-  
+
+
 }
 
 
